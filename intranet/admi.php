@@ -1,4 +1,6 @@
-<?php require_once './validarSesion.php'; ?>
+<script src="../src/controladores/auth_controller.js">
+    
+  </script>
 <!DOCTYPE html>
 <html lang="en">
 

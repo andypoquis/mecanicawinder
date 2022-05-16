@@ -55,9 +55,14 @@
     </section>
   </main>
   <!-- Sweetalert2 -->
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11">
+    
+  </script>
   <!-- JS personalizado -->
-  <script src="../src/assets/js/inicioSesion.js" type="module"></script>
+  <script src="../src/assets/js/inicioSesion.js" type="module">
+    
+    
+  </script>
 </body>
 
 </html>

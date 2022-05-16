@@ -21,24 +21,28 @@ const limpiarCampos = () => {
 
 const identificarUsuario = async (usuario, password) => {
   try {
-    const res = await fetch("../src/Controladores/ControladorUsuario", {
+    const res = await fetch("http://34.133.92.25/api/auth/local", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        accion: "identificarUsuario",
-        usuario: {
-          usuario: usuario,
+       
+          identifier: usuario,
           password: password,
-        },
+        
       }),
     });
+    console.log(res.status);
     const data = await res.json();
-    if (data.mensaje === "EXITO") {
+    if (res.status == 200) {
       limpiarCampos();
-      location.href = "./admi";
-    } else if (data.mensaje === "LOGIN") {
+     
+     
+      sessionStorage.setItem('key', true);
+      window.location.href = '../intranet/admi';
+
+    } else if (res.status == 400) {
       notificacionSwal(titulo, "Credenciales no válidas.", "info", "Ok");
-      location.href = "./login";
+      
     } else {
       notificacionSwal(titulo, "Ocurrió un error inesperado...", "error", "Ok");
     }
@@ -55,3 +59,5 @@ window.addEventListener("DOMContentLoaded", () => {
     manejarInicioSesion();
   });
 });
+
+
