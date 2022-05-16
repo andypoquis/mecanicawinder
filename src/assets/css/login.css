@@ -97,7 +97,7 @@ section .contentBx .formBx .inputBx input {
   font-family: var(--fuente-principal);
 }
 section .contentBx .formBx .inputBx input[type="submit"] {
-  background-color: var(--color-secundario-blue);
+  background-color: grey;
   color: #fff;
   outline: none;
   border: none;
@@ -106,7 +106,7 @@ section .contentBx .formBx .inputBx input[type="submit"] {
   font-family: var(--fuente-principal);
 }
 section .contentBx .formBx .inputBx input[type="submit"]:hover {
-  background-color: rgba(72, 43, 231, 0.73);
+  /*background-color: rgba(72, 43, 231, 0.73);*/
 }
 section .contentBx .formBx .inputBx p {
   color: var(--color-letra-principal);

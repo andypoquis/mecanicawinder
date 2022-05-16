@@ -16,6 +16,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap"
     rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -31,14 +32,14 @@
           <form id="frmInicioSesion">
             <div class="inputBx">
               <span>Usuario</span>
-              <input type="text" id="usuario">
+              <input id="usuario" >
             </div>
             <div class="inputBx">
               <span>Password</span>
-              <input type="password" id="password" >
+              <input id="password" type="password" >
             </div>
             <div class="inputBx">
-              <input type="submit" value="Iniciar Sesi&oacute;n">
+              <input id="button-login" type="submit" value="Iniciar Sesi&oacute;n" >
             </div>
             <div class="inputBx">
               <p>Aun no te as registrado? <a href="registro">Registarte</a></p>

@@ -2,6 +2,38 @@ import { notificacionSwal } from "./utils/notificacionSwal.js";
 
 const titulo = document.title;
 
+let isPassword = false;
+let isUser = false;
+
+$("#button-login").prop('disabled', true);
+
+$('#usuario').keyup(function () {
+  isUser = ($(this).val().length != 0) ? true : false;
+
+  if(isPassword && isUser) {
+    document.getElementById("button-login").style.backgroundColor = "#3a0ca3";
+    $("#button-login").prop('disabled', false);
+  }else{
+    document.getElementById("button-login").style.backgroundColor = "grey";
+    $("#button-login").prop('disabled', true);
+  }
+  
+
+});
+
+$('#password').keyup(function () {
+  isPassword = ($(this).val().length != 0) ? true : false;
+  if(isPassword && isUser) {
+    document.getElementById("button-login").style.backgroundColor = "#3a0ca3";
+    $("#button-login").prop('disabled', false);
+  }else{
+    document.getElementById("button-login").style.backgroundColor = "grey";
+    $("#button-login").prop('disabled', true);
+  }
+  
+});
+
+
 const manejarInicioSesion = () => {
   let inputUsuario = String(usuario.value).trim();
   let inputPassword = String(password.value).trim();
