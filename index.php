@@ -15,7 +15,7 @@
   omnisokk <a href="./intranet/login.php">Iniciar Sesi&oacute;n</a>
   <div></div>
   <script>
-    location.href = './home.php';
+    location.href = './home';
   </script>
 </body>
 

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Registro</title>
   <!-- CSS personalizado -->
   <link rel="stylesheet" href="../src/assets/css/login.css">
   <!-- Iconos -->
@@ -21,43 +21,49 @@
 <body>
   <main>
     <section>
-      <div class="imgBx">
-        <img src="../src/assets/img/fondo.jpg" alt="login fondo">
-      </div>
 
       <div class="contentBx">
+
+
         <div class="formBx">
-          <h2>Login</h2>
-          <form id="frmInicioSesion">
+
+          <h2>Registro</h2>
+          <form action="">
             <div class="inputBx">
               <span>Usuario</span>
-              <input type="text" id="usuario">
+              <input type="text">
             </div>
             <div class="inputBx">
               <span>Password</span>
-              <input type="password" id="password" >
+              <input type="password">
             </div>
             <div class="inputBx">
-              <input type="submit" value="Iniciar Sesi&oacute;n">
+              <span>Dni</span>
+              <input type="number">
             </div>
             <div class="inputBx">
-              <p>Aun no te as registrado? <a href="registro">Registarte</a></p>
+              <span>Celular</span>
+              <input type="number">
+            </div>
+            <div class="inputBx">
+              <input type="submit" value="Registrate">
+            </div>
+            <div class="inputBx">
+              <p>Quieres regresar a login? <a href="login">login</a></p>
             </div>
           </form>
-          <h3>Ingresar con:</h3>
-          <ul class="sci">
-            <li><img src="../src/assets/img/facebook.png" alt="facebook"></li>
-            <li><img src="../src/assets/img/twitter.png" alt="twitter"></li>
-            <li><img src="../src/assets/img/instagram.png" alt="instagram"></li>
-          </ul>
+
         </div>
+      </div>
+      <div class="imgBx">
+        <img src="../src/assets/img/registro.jpg" alt="login fondo">
       </div>
     </section>
   </main>
   <!-- Sweetalert2 -->
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
   <!-- JS personalizado -->
-  <script src="../src/assets/js/inicioSesion.js" type="module"></script>
+  <script src="./src/assets/js/inicioSesion.js" type="module"></script>
 </body>
 
 </html>
