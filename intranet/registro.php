@@ -49,7 +49,7 @@
               <input type="submit" value="Registrate">
             </div>
             <div class="inputBx">
-              <p>Quieres regresar a login? <a href="login">login</a></p>
+              <p>Quieres volver? <a href="admi.php">Regresar</a></p>
             </div>
           </form>
 

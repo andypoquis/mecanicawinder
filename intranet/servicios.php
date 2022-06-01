@@ -5,7 +5,7 @@
   </div>
   <div class="main-content">
     <main class="main">
-      <a href="./registro.php" id="registro" class="boton boton-verde">registrar</a>
+      <a href="#" class="boton boton-verde">registrar</a>
       <section id="tab3">
         <header>
           <div class="search-wrapper">
@@ -22,7 +22,7 @@
           </div>
         </header>
         <div class="activity-card ab">
-          <h3>Usuarios</h3>
+          <h3>Servicios</h3>
           <div class="table-responsive">
             <table id="table">
              <!-- data -->
@@ -32,7 +32,7 @@
       </section>
     </main>
   </div>
-  <script src="../src/Controladores/users_controller.js" type="module"></script>
+  <script src="../src/Controladores/servicios_controller.js" type="module"></script>
   </body>
 
 </html>

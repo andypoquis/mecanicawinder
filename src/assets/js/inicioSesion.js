@@ -5,34 +5,30 @@ const titulo = document.title;
 let isPassword = false;
 let isUser = false;
 
-$("#button-login").prop('disabled', true);
+$("#button-login").prop("disabled", true);
 
-$('#usuario').keyup(function () {
-  isUser = ($(this).val().length != 0) ? true : false;
+$("#usuario").keyup(function () {
+  isUser = $(this).val().length != 0 ? true : false;
 
-  if(isPassword && isUser) {
+  if (isPassword && isUser) {
     document.getElementById("button-login").style.backgroundColor = "#3a0ca3";
-    $("#button-login").prop('disabled', false);
-  }else{
+    $("#button-login").prop("disabled", false);
+  } else {
     document.getElementById("button-login").style.backgroundColor = "grey";
-    $("#button-login").prop('disabled', true);
+    $("#button-login").prop("disabled", true);
   }
-  
-
 });
 
-$('#password').keyup(function () {
-  isPassword = ($(this).val().length != 0) ? true : false;
-  if(isPassword && isUser) {
+$("#password").keyup(function () {
+  isPassword = $(this).val().length >= 5 ? true : false;
+  if (isPassword && isUser) {
     document.getElementById("button-login").style.backgroundColor = "#3a0ca3";
-    $("#button-login").prop('disabled', false);
-  }else{
+    $("#button-login").prop("disabled", false);
+  } else {
     document.getElementById("button-login").style.backgroundColor = "grey";
-    $("#button-login").prop('disabled', true);
+    $("#button-login").prop("disabled", true);
   }
-  
 });
-
 
 const manejarInicioSesion = () => {
   let inputUsuario = String(usuario.value).trim();
@@ -57,24 +53,25 @@ const identificarUsuario = async (usuario, password) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-       
-          identifier: usuario,
-          password: password,
-        
+        identifier: usuario,
+        password: password,
       }),
     });
+
     console.log(res.status);
-    const data = await res.json();
+    const data = await res.json().then((data) => {
+      console.log(data.jwt);
+      sessionStorage.setItem("token", data.jwt);
+      sessionStorage.setItem("id", data.user.id);
+    });
+
     if (res.status == 200) {
       limpiarCampos();
-     
-     
-      sessionStorage.setItem('key', true);
-      window.location.href = '../intranet/admi';
 
+      sessionStorage.setItem("key", true);
+      window.location.href = "../intranet/admi";
     } else if (res.status == 400) {
       notificacionSwal(titulo, "Credenciales no válidas.", "info", "Ok");
-      
     } else {
       notificacionSwal(titulo, "Ocurrió un error inesperado...", "error", "Ok");
     }
@@ -91,5 +88,3 @@ window.addEventListener("DOMContentLoaded", () => {
     manejarInicioSesion();
   });
 });
-
-

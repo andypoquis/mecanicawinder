@@ -428,6 +428,10 @@ tbody tr:nth-child(even) {
   padding: 0.4rem 1rem;
 }
 
+#image_profile{
+  size: 25px;
+}
+
 .table-responsive {
   overflow-x: auto;
 }
