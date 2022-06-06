@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+</head>
+<body>
+    <h1>Productos</h1>
+    <p>Edita el ultimo producto registrado</p>
+    <div class="inputBx">
+        <span>Nombre</span>
+        <input id="name" >
+    </div>
+    <br>
+    <div class="inputBx">
+        <span>Descripción</span>
+        <input id="description" >
+    </div>
+    <br>
+    <div class="inputBx">
+        <span>Stock</span>
+        <input type="number" id="stock" >
+    </div>
+    <br>
+    <div class="inputBx">
+        <span>Precio</span>
+        <input type="number" id="price">
+    </div>
+    <br>
+    <br>
+
+    <form>
+        <!-- Can be multiple files -->
+        <input id="image" type="file" name="files" />
+     
+        <input type="submit" value="Editar Producto" />
+      </form>
+    
+    <script src="../../src/Controladores/product/editproduct_controller.js"></script>
+</body>
+</html>

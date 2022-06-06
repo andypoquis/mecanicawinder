@@ -82,4 +82,30 @@ const generadorServicios = (data) => {
 
   return columna;
 };
-export { generadorUsuarios, generadorProducto, generadorServicios };
+
+const generarClientServices = (data) => {
+  let columna = `<thead id='hearder_table'> `;
+  columna += `<tr>`;
+  columna += `<th>Id</th>`;
+  columna += `<th>Cliente</th>`;
+  columna += `<th>Técnico</th>`;
+  columna += `<th>Servicio</th>`;
+  columna += `<th colspan="2">Operaciones</th>`;
+  columna += `</tr>`;
+  columna += `</thead>`;
+
+  for (var i = 0; i < data.data.length; i++) {
+    columna += `<tbody>`;
+    columna += `<td >${data.data[i].id}</td>`;
+    columna += `<td >${data.data[i].attributes.client_service.data.attributes.name}</td>`;
+    columna += `<td >${data.data[i].attributes.technical_service.data.attributes.name}</td>`;
+
+    columna += `<td >${data.data[i].attributes.service.data.attributes.name}</td>`;
+    columna += `<td><a href="#" class="td-team img-1"></td>`;
+    columna += `<td><a href="#" class="td-team img-3"></td>`;
+    columna += `</tbody>`;
+  }
+
+  return columna;
+};
+export { generadorUsuarios, generadorProducto, generadorServicios, generarClientServices };

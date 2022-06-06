@@ -54,7 +54,7 @@ const getDataRole = async () => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="pedidos">
             <span><i class="fas fa-cart-arrow-down"></i></span>
             <span>Pedidos</span>
           </a>
@@ -77,6 +77,8 @@ const getDataRole = async () => {
         document.getElementById("usuario").href = "admi.php";
         document.getElementById("productosss").href = "productos.php";
         document.getElementById("servicios").href = "servicios.php";
+        document.getElementById("pedidos").href = "pedidos.php";
+
       }
     });
     if (res.status == 200) {
